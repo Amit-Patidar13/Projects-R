@@ -2,7 +2,7 @@ import { CDN_URL } from "../utils/constants";
 
 const ReasturantCard = (props) => {
   const { resData } = props;
-  const { name, cuisines, deliveryTime, cloudinaryImageId, costForTwo } =
+  const { name, cuisines, deliveryTime, cloudinaryImageId, costForTwo, avgRating } =
     resData?.data;
   //this props are direclty also sended as resName and cuisine instead of props and used accordingly and can also be send as
   // const {resName, cuisine} = props;
@@ -17,6 +17,7 @@ const ReasturantCard = (props) => {
       <h4>{cuisines.join(", ")}</h4>
       <h4>Min Delivery Time {deliveryTime} minutes</h4>
       <h4>{costForTwo / 100} for two</h4>
+      <h4>Rating: {avgRating}</h4>
     </div>
   );
 };
